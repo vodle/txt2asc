@@ -71,6 +71,14 @@ class metal:
         " _| |_ ",
         " \\___/ " 
         ]
+    met_j = [
+        "   ___ ",
+        "  |_  |",
+        "    | |",
+        "    | |",
+        "/\\__/ /",
+        "\\____/ "
+    ]
     met_k = [
         " _   __",
         "| | / /",
@@ -159,6 +167,14 @@ class metal:
         "\\ \\_/ /",
         " \\___/ " 
         ]
+    met_w = [
+        " _    _ ",
+        "| |  | |",
+        "| |  | |",
+        "| |/\\| |",
+        "\\  /\\  /",
+        " \\/  \\/ "
+    ]
     met_x = [
         "__   __",
         "\\ \\ / /",
@@ -184,12 +200,12 @@ class metal:
         "\\_____/" 
         ]
     met_prob = [
-        "  ",
-        "  ",
-        "  ",
-        "  ",
-        "  ",
-        "  "
+        "   ",
+        "   ",
+        "   ",
+        "   ",
+        "   ",
+        "   "
     ]
 def call_letter(letter):
     if letter == "a":
@@ -210,6 +226,8 @@ def call_letter(letter):
         return metal.met_h
     if letter == "i":
         return metal.met_i
+    if letter == "j":
+        return metal.met_j
     if letter == "k":
         return metal.met_k
     if letter == "l":
@@ -232,13 +250,15 @@ def call_letter(letter):
         return metal.met_t
     if letter == "v":
         return metal.met_v
+    if letter == "w":
+        return metal.met_w
     if letter == "x":
         return metal.met_x
     if letter == "y":
         return metal.met_y
     if letter == "z":
         return metal.met_z
-    if letter == " ":
+    if letter == " " or "":
         return metal.met_prob
 
 

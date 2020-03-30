@@ -15,24 +15,25 @@ def main():
     file = open("./out/" + inp + ".txt", "w")
     string_builder(str, inp)
 def string_builder(string, name):
-    str = string
-    str = list(str)
-    leters = []
-    mass = [["","","","","",""]]
-    i = 0
-    for inc in str:
-        leters.append(font.call_letter(inc))
-    for inc in range(len(leters)):
-        for incr in range(6):
-            if incr < 6:
-                mass[0][incr] = mass[0][incr] + leters[inc][incr]
+    try:
+        stri = string
+        stri = list(stri)
+        leters = []
+        mass = [["","","","","",""]]
+        i = 0
+        for inc in stri:
+            leters.append(font.call_letter(inc))
+        for inc in range(len(leters)):
+            for incr in range(6):
+                mass[0][incr] = str(mass[0][incr] + leters[inc][incr])
+        for innn in range(6):
+            if innn < 6:
+                mass[0][innn] = mass[0][innn] + "\n"
+                print(mass[0][innn], end="")
+                writeInFile(name, mass[0][innn])
             else:pass
-    for innn in range(6):
-        if innn < 6:
-            mass[0][innn] = mass[0][innn] + "\n"
-            print(mass[0][innn], end="")
-            writeInFile(name, mass[0][innn])
-        else:pass
+    except:
+        print("smt goes wrong")
 
 def is_number(s):
     try:
