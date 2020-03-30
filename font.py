@@ -167,6 +167,14 @@ class metal:
         "\\ \\_/ /",
         " \\___/ " 
         ]
+    met_u = [
+        " _   _ ",
+        "| | | |",
+        "| | | |",
+        "| | | |",
+        "| |_| |",
+        " \\___/ "
+    ]
     met_w = [
         " _    _ ",
         "| |  | |",
@@ -250,6 +258,8 @@ def call_letter(letter):
         return metal.met_t
     if letter == "v":
         return metal.met_v
+    if letter == "u":
+        return metal.met_u
     if letter == "w":
         return metal.met_w
     if letter == "x":
